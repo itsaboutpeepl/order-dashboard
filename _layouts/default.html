@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} – {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <!--[if lt IE 9]>
+    <script src="{{ '/vendor/html5shiv/html5shiv.js' | relative_url }}"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&#038;family=Lato:ital,wght@0,400;0,700;1,400;1,700&#038;display=swap" media="all" />
+    <link rel="stylesheet" href="{{ layout.css | default: '/assets/css/style.css' | relative_url }}?{{ site.time | date: '%s%N' }}">
+</head>
+<body class="{% if layout.bodyclass %}{{ layout.bodyclass }}{% endif %} {% if page.bodyclass %}{{ page.bodyclass }}{% endif %}">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    {{ content }}
+
+    <script src="{{ '/vendor/jquery/jquery.min.js' | relative_url }}"></script>
+    <script src="{{ '/bootstrap/dist/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}?{{ site.time | date: '%s%N' }}"></script>
+</body>
+</html>

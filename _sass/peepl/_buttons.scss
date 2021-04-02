@@ -1,0 +1,9 @@
+.btn-peepl {
+    color: color-yiq($red);
+    @include gradient-x($orange, $red);
+
+    @include hover() {
+        color: color-yiq( darken($red, 7.5%) );
+        @include gradient-x( darken($orange, 7.5%), darken($red, 7.5%) );
+    }
+}

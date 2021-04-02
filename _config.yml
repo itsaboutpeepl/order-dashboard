@@ -1,0 +1,22 @@
+title: Peepl
+
+host: 0.0.0.0
+
+markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - bootstrap/.github/
+  - bootstrap/build/
+  - bootstrap/nuget/
+  - bootstrap/site/
+  - bootstrap/*.md
+  - bootstrap/*.yml
+  - bootstrap/*.json
+
+sass:
+  load_paths:
+    - _sass
+    - bootstrap/scss
