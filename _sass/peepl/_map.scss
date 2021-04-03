@@ -13,31 +13,28 @@
     .leaflet-tile-pane {
         opacity: 0.5;
     }
+}
 
-    .customer-returning,
-    .customer-new {
-        border-radius: 100%;
-        border: 4px solid #fff;
-        box-shadow: 0 5px 10px rgba(#000, 0.2);
-        background-color: $color-peepl-red;
-        @include gradient-y($color-peepl-orange, $color-peepl-red);
-    }
+.customer-returning,
+.customer-new {
+    border-radius: 100%;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 10px rgba(#000, 0.2);
+    background-color: $color-peepl-red;
+    @include gradient-y($color-peepl-orange, $color-peepl-red);
 
-    .customer-new {
-        background-color: $color-peepl-green;
-        @include gradient-y($color-peepl-green, $color-peepl-teal);
+    .peepl-map.zoomed-out & {
+        width: 20px !important;
+        height: 20px !important;
+        margin-top: -10px !important;
+        margin-bottom: -10px !important;
+        border-width: 3px;
     }
+}
 
-    &.zoomed-out {
-        .customer-returning,
-        .customer-new {
-            width: 20px !important;
-            height: 20px !important;
-            margin-top: -10px !important;
-            margin-bottom: -10px !important;
-            border-width: 3px;
-        }
-    }
+.customer-new {
+    background-color: $color-peepl-green;
+    @include gradient-y($color-peepl-green, $color-peepl-teal);
 }
 
 .peepl-map-filters {
@@ -78,5 +75,12 @@
 
     p {
         margin-bottom: 0;
+    }
+
+    .customer-returning,
+    .customer-new {
+        width: 20px;
+        height: 20px;
+        border-width: 3px;
     }
 }
