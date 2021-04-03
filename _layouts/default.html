@@ -8,6 +8,7 @@
     <!--[if lt IE 9]>
     <script src="{{ '/vendor/html5shiv/html5shiv.js' | relative_url }}"></script>
     <![endif]-->
+    <link rel="stylesheet" href="{{ '/vendor/leaflet/leaflet.css' | relative_url }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&#038;family=Lato:ital,wght@0,400;0,700;1,400;1,700&#038;display=swap" media="all" />
     <link rel="stylesheet" href="{{ layout.css | default: '/assets/css/style.css' | relative_url }}?{{ site.time | date: '%s%N' }}">
 </head>
@@ -16,8 +17,11 @@
 
     {{ content }}
 
+    <script src="{{ '/vendor/underscore/underscore.min.js' | relative_url }}"></script>
     <script src="{{ '/vendor/jquery/jquery.min.js' | relative_url }}"></script>
     <script src="{{ '/bootstrap/dist/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+    <script src="{{ '/vendor/leaflet/leaflet.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/data.js' | relative_url }}?{{ site.time | date: '%s%N' }}"></script>
     <script src="{{ '/assets/js/main.js' | relative_url }}?{{ site.time | date: '%s%N' }}"></script>
 </body>
 </html>

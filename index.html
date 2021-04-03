@@ -2,6 +2,57 @@
 layout: default
 ---
 
-<div class="container">
-    <h1>Hello</h1>
+<div class="container py-3 py-md-4 py-lg-5">
+
+    <div class="d-sm-flex align-items-center">
+        <a href="https://itsaboutpeepl.com/eat" class="d-block mb-3 mb-sm-0 mr-sm-auto">
+            <img src="{{ '/assets/img/peepl-eat-red.svg' | relative_url }}" width="100" height="64" alt="Peepl Eat">
+        </a>
+
+        <div class="d-sm-flex peepl-map-filters">
+            <select id="week" class="form-control form-control-sm mb-3 mb-sm-0 ml-sm-3"></select>
+            <select id="vendor" class="form-control form-control-sm mb-3 mb-sm-0 ml-sm-3"></select>
+        </div>
+    </div>
+
+    <div id="map" class="peepl-map rounded mt-3 mt-lg-4"></div>
+
+    <div class="row">
+        <div class="col-sm-4 statistic">
+            <h1 class="js-total-spend"></h1>
+            <p>total customer spend</p>
+        </div>
+        <div class="col-sm-4 statistic">
+            <h1 class="js-total-reward"></h1>
+            <p>total rewards earned <span class="text-muted d-block">to spend again in the city region</span></p>
+        </div>
+        <div class="col-sm-4 statistic">
+            <h1 class="js-vendor-saving"></h1>
+            <p>saving for restaurants <span class="text-muted d-block">compared to the big delivery platforms</span></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4 statistic">
+            <h1 class="js-total-orders"></h1>
+            <p>orders</p>
+        </div>
+        <div class="col-sm-4 statistic">
+            <h1 class="js-returning-customers"></h1>
+            <p>returning customers</p>
+        </div>
+        <div class="col-sm-4 statistic">
+            <h1 class="js-average-order"></h1>
+            <p>average order value</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="bg-dark text-white py-3 py-md-4 py-lg-5 mt-5">
+    <div class="container">
+        <p class="peepl-map-attribution mb-0">
+            Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> / Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors
+        </p>
+    </div>
 </div>
