@@ -2,8 +2,8 @@
 
 ## How to run this site locally
 
-    git clone --recursive git@github.com:itsaboutpeepl/peepl-eat-orders-prototype.git
-    cd peepl-eat-orders-prototype
+    git clone --recursive git@github.com:itsaboutpeepl/order-dashboard.git
+    cd order-dashboard
     bundle install
     bundle exec jekyll serve --baseurl ''
 
